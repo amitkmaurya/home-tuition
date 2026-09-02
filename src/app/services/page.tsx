@@ -1,0 +1,4 @@
+import { CTA, PageIntro, SectionHeading, ServiceCard } from "@/components/sections";
+import { services } from "@/data/site";
+export const metadata = { title: "Services", description: "Explore home tuition, online tuition, exam preparation, and personalized learning plans." };
+export default function Services() { return <><PageIntro eyebrow="Learning services" title="Focused help for the moments that matter." text="Whether your child needs a stronger foundation, exam preparation, or a little more confidence, our services are designed to meet them there."/><section className="container py-24"><SectionHeading eyebrow="Ways to learn" title="Choose the kind of support that fits." text="Every service can be shaped around your child’s level, goals, and preferred learning mode."/><div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{services.map(service => <ServiceCard key={service.title} service={service}/>)}</div></section><CTA/></>; }
