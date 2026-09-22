@@ -43,4 +43,11 @@ export const reasons = [
   ["Consistent Academic Support", "Helping students learn with confidence and build strong foundations.", "Brain"],
 ];
 
-export const testimonials = [];
+export type Testimonial = {
+  quote: string;
+  name: string;
+  subject: string;
+  role: string;
+};
+
+export const testimonials: Testimonial[] = [];
